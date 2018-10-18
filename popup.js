@@ -17,7 +17,11 @@ chrome.storage.sync.get('color', function(data) {
     }, function (tabs) {
       chrome.tabs.executeScript(
         tabs[0].id, {
-          code: 'document.body.style.backgroundColor = "' + color + '";'
+          file: 'jquery/jquery-3.3.1.min.js'
+        }, function () {
+           chrome.tabs.executeScript({
+             file: 'content.js'
+           });
         });
     });
   };
