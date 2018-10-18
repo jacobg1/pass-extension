@@ -1,17 +1,10 @@
 {
   "name": "Getting Started Example",
-  "version": "1.0",
+  "version": "2",
   "description": "Build an Extension!",
   "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "http://*/*"],
-   "content_scripts": [{
-     "matches": ["http://*/*"],
-     "js": ["jquery/jquery-3.3.1.min.js", "changeTo.js", "changeFrom.js"],
-     "run_at": "document_end"
-   }],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-
+    "scripts": ["background.js"]
   },
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "page_action": {
