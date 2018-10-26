@@ -1,17 +1,16 @@
 console.log('change from', $)
 
 
+if(typeof(allPasswordInputs) === 'undefined') {
+    let allPasswordInputs = $('input:text')
+    console.log(allPasswordInputs)
+    allPasswordInputs.each(function () {
+        console.log($(this))
+        if($(this).attr('changed')) {
+            $(this).prop('type', 'password')
 
-// chrome.storage.sync.get("object", function(result) {
-//     console.log(result);
-//     // if(result.key) {
-//     //     chrome.storage.sync.clear(function() {
-//     //         console.log('storage cleared', result.key);
-//     //       });
+            $(this).removeAttr('changed')
+        }
 
-//     // }
-//     // $.each(result.key, function (index, value) {
-//     //    console.log(value);
-//     // });
-//   })
-
+    })
+}
