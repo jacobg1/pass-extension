@@ -7,13 +7,40 @@
       height: 30px;
       width: 30px;
       outline: none;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 2px;
+    }
+
+    body {
+        width: 70px;
+        height: 34px;
+    }
+    #buttons {
+        text-align: center;
+    }
+    #changeTo {
+        float: left;
+        background-color: red;
+    }
+    #changeFrom {
+        float: right;
+        background-color: blue;
+    }
+    #changeFrom:hover {
+        background-color: orange;
+    }
+    #changeTo:hover {
+        background-color: blueviolet;
     }
   </style>
 </head>
 
 <body>
-  <button id="changeTo">ON</button>
-  <button id="changeFrom">OFF</button>
+    <div id="buttons">
+      <button id="changeTo">ON</button>
+      <button id="changeFrom">OFF</button>
+    </div>
   <script src="popup.js"></script>
 </body>
 
